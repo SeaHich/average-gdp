@@ -107,6 +107,7 @@ def create_report_avg_gdp(raw_country_data):
 
 
 def create_something_inflation(raw_country_data):
+    """Будующий отчёт"""
     pass
 
 
