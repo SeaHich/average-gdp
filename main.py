@@ -23,6 +23,7 @@ namespace = parser.parse_args()
 
 CORRECT_REPORT_NAMES = (
     'average-gdp.csv',
+    'something_inflation'
     )
 
 
@@ -105,6 +106,10 @@ def create_report_avg_gdp(raw_country_data):
     return table_data
 
 
+def create_something_inflation(raw_country_data):
+    pass
+
+
 def main():
 
     check_report_name()
@@ -114,6 +119,8 @@ def main():
 
     if namespace.report == 'average-gdp.csv':
         table_data = create_report_avg_gdp(raw_country_data)
+    elif namespace.report == 'something_inflation':
+        table_data = create_something_inflation(raw_country_data)
     else:
         raise TypeError('Некорректное имя отчёта')
 
