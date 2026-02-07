@@ -8,7 +8,7 @@ parser.add_argument(
     '-f',
     '--files',
     type=str,
-    default='economic1.csv',
+    default='economic2.csv',
     help='Путь или имя файла с данными'
 )
 parser.add_argument(
@@ -18,6 +18,7 @@ parser.add_argument(
     type=str,
     help='Имя отчёта'
 )
+
 namespace = parser.parse_args()
 
 CORRECT_REPORT_NAMES = (
