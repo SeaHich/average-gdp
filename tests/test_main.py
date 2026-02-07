@@ -104,6 +104,7 @@ def test_create_report_avg_gdp_key(table_data, key):
 
 
 def test_create_report_file_avg_gdp(table_data):
-    remove('average-gdp.csv')
+    if path.exists('average-gdp.csv'):
+        remove('average-gdp.csv')
     create_report_file(table_data)
     assert path.exists('average-gdp.csv')
